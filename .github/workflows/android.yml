@@ -19,3 +19,9 @@ jobs:
         java-version: 1.8
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Store test results
+      uses: actions/upload-artifact@v2
+      with:
+        name: reports
+        path: ./**/build/outputs/apk
+        
